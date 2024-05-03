@@ -1,0 +1,40 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/**
+ *
+ * Home Max
+ *
+ */
+
+.layout--home #main {
+  @include breakpoint($x-large) {
+    max-width: 100%;
+  }
+}
+
+
+.layout--home .page {
+  @include breakpoint($large) {
+    float: none;
+    // width: calc(100% - #{$right-sidebar-width-narrow});
+    // padding-right: $right-sidebar-width-narrow;
+    width: 100%;
+    padding: 0;
+  }
+
+  @include breakpoint($x-large) {
+    // width: calc(100% - #{$right-sidebar-width});
+    // padding-right: $right-sidebar-width;
+    width: 100%;
+    padding: 0;
+  }
+
+}
