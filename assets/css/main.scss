@@ -2,11 +2,50 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+// @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+ /* system typefaces */
+ $serif: Georgia, Times, serif !default;
+ $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
 @import "minimal-mistakes"; // main partials
+
+
+html {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 16px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+
 
 /**
  *
@@ -14,27 +53,133 @@ search: false
  *
  */
 
-.layout--home #main {
-  @include breakpoint($x-large) {
+.layout--home #main,
+.layout--home .masthead__inner-wrap {
+  max-width: 100%;
+  margin: 0 auto;
+  @include breakpoint($large) {
     max-width: 100%;
   }
 }
 
+// .layout--home .page {
+//   @include breakpoint($large) {
+//     float: none;
+//     // width: calc(100% - #{$right-sidebar-width-narrow});
+//     // padding-right: $right-sidebar-width-narrow;
+//     width: 100%;
+//     padding: 0;
+//   }
 
-.layout--home .page {
-  @include breakpoint($large) {
-    float: none;
-    // width: calc(100% - #{$right-sidebar-width-narrow});
-    // padding-right: $right-sidebar-width-narrow;
-    width: 100%;
-    padding: 0;
+//   @include breakpoint($x-large) {
+//     // width: calc(100% - #{$right-sidebar-width});
+//     // padding-right: $right-sidebar-width;
+//     width: 100%;
+//     padding: 0;
+//   }
+
+// }
+
+
+.project-home {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
+
+  @include breakpoint($medium) {
+    justify-content: space-between;
   }
 
-  @include breakpoint($x-large) {
-    // width: calc(100% - #{$right-sidebar-width});
-    // padding-right: $right-sidebar-width;
+  .project-home__info,
+  .project-home__credits,
+  .project-home__extra {
     width: 100%;
-    padding: 0;
   }
 
+  .project-home__info {
+    @include breakpoint($medium) {
+      width: 100%;
+    }
+    @include breakpoint($large) {
+      width: calc(40% - 5em);
+    }
+  }
+
+  .project-home__info-title {
+    margin-top: 0;
+  }
+
+  .project-home__credits {
+    ul {
+      margin: 0;
+      padding-left: 0;
+      li {
+        list-style-type: none;
+      }
+    }
+    @include breakpoint($medium) {
+      width: calc(50% - 5em);
+    }
+    @include breakpoint($large) {
+      width: calc(30% - 5em);
+    }
+  }
+  .project-home__extra {
+    @include breakpoint($medium) {
+      width: calc(50% - 2em);
+    }
+    @include breakpoint($large) {
+      width: calc(30% - 2em);
+    }
+  }
 }
+
+
+
+/*
+   Media and embeds
+   ========================================================================== */
+
+/* Figures and images */
+
+figure {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
+
+  img,
+  iframe,
+  .fluid-width-video-wrapper {
+    margin-bottom: 1em;
+  }
+
+  img {
+    border-radius: 0px;
+  }
+
+  &.maxgallery {
+    @include breakpoint($medium) {
+      justify-content: start;
+    }
+    > a,
+    > img {
+      width: calc(33.3333% - .5em);
+      margin-right: .5em;
+      @include breakpoint($medium) {
+        margin-right: 1em;
+        width: 150px;
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+}
+
+
+
