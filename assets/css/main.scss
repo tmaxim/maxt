@@ -161,6 +161,11 @@ figure {
     border-radius: 0px;
   }
 
+  figcaption {
+    font-family: $sans-serif;
+  }
+
+
   &.maxgallery {
     @include breakpoint($medium) {
       justify-content: start;
@@ -180,6 +185,7 @@ figure {
     }
   }
 }
+
 
 
 
