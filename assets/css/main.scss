@@ -16,34 +16,43 @@ search: false
    Typography
    ========================================================================== */
 
- /* system typefaces */
- $serif: Georgia, Times, serif !default;
- $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
- $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+/* system typefaces */
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+/*
+   Colors
+   ========================================================================== */
+
+$footer-background-color: #fff !default;
+
+/* links */
+$link-color: #222 !default;
+$link-color-hover: #000 !default;
+$link-color-visited: mix(#fff, $link-color, 15%) !default;
 
 @import "minimal-mistakes"; // main partials
 
 
 html {
-  font-size: 16px;
+  font-size: 14px;
 
   @include breakpoint($medium) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @include breakpoint($large) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @include breakpoint($x-large) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
-
 
 
 
@@ -53,14 +62,14 @@ html {
  *
  */
 
-.layout--home #main,
-.layout--home .masthead__inner-wrap {
-  max-width: 100%;
-  margin: 0 auto;
-  @include breakpoint($large) {
-    max-width: 100%;
-  }
-}
+// .layout--home #main,
+// .layout--home .masthead__inner-wrap {
+//   max-width: 100%;
+//   margin: 0 auto;
+//   @include breakpoint($large) {
+//     max-width: 100%;
+//   }
+// }
 
 // .layout--home .page {
 //   @include breakpoint($large) {
@@ -88,10 +97,16 @@ html {
   flex-wrap: wrap;
   margin: 2em 0;
 
+  p {
+    line-height: 1.5em;
+    margin-bottom: 0.75em;
+  }
+
   @include breakpoint($medium) {
     justify-content: space-between;
   }
 
+  .project-home__title,
   .project-home__info,
   .project-home__credits,
   .project-home__extra {
@@ -187,5 +202,37 @@ figure {
 }
 
 
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.page__footer {
+  border-top: 1px solid $lighter-gray;
+  a {
+    color: $link-color;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
 
 
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+/*
+   Author profile and links
+   ========================================================================== */
+
+.author__content,
+.author__urls {
+  a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $link-color-hover;
+    }
+  }
+}

@@ -2,9 +2,114 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
+#
+# Insñiration:
+# https://www.behance.net/Thiago_Botelho
+# https://www.behance.net/gallery/199113227/Industrial-Design-Portfolio
+# https://www.behance.net/gallery/125325701/Oribe-exploratory-renderings
+# https://www.behance.net/gallery/124195663/CGI-Product-Renders-KUAWII
+# https://www.behance.net/gallery/129590837/Sudio-T2-product-visualization
+#
+#
+#
+#
+#
+#
+#
+#
+#
 layout: home
 author_profile: false
-gallery2:
+# Hair Logic Gallery
+# -------------------------------------------------------------
+hair_logic_gallery:
+  - image_path: /assets/images/th-400x400-1.png
+    url: /assets/images/full-768x1024-1.png
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - image_path: /assets/images/th-400x400-2.png
+    url: /assets/images/full-1024x768-2.png
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - image_path: /assets/images/th-400x400-3.png
+    url: /assets/images/full-1024x512-3.png
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
+  - image_path: /assets/images/th-400x400-4.png
+    url: /assets/images/full-1576x1024-4.png
+    alt: "placeholder image 4"
+    title: "Image 4 title caption"
+  - image_path: /assets/images/th-400x400-5.png
+    url: /assets/images/full-600x800-5.png
+    alt: "placeholder image 5"
+    title: "Image 5 title caption"
+  - image_path: /assets/images/th-400x400-6.png
+    url: /assets/images/full-800x600-6.png
+    alt: "placeholder image 6"
+    title: "Image 6 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1080x1920-7.png
+    alt: "placeholder image 7"
+    title: "Image 7 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1920x1080-8.png
+    alt: "placeholder image 8"
+    title: "Image 8 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1200x1200-9.png
+    alt: "placeholder image 9"
+    title: "Image 9 title caption"
+  - image_path: /assets/images/th-400x400-10.png
+    url: /assets/images/full-1280x720-10.png
+    alt: "placeholder image 10"
+    title: "Image 10 title caption"
+# Proiduct Visualization Gallery
+# -------------------------------------------------------------
+product_vis_gallery:
+  - image_path: /assets/images/th-400x400-1.png
+    url: /assets/images/full-768x1024-1.png
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - image_path: /assets/images/th-400x400-2.png
+    url: /assets/images/full-1024x768-2.png
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - image_path: /assets/images/th-400x400-3.png
+    url: /assets/images/full-1024x512-3.png
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
+  - image_path: /assets/images/th-400x400-4.png
+    url: /assets/images/full-1576x1024-4.png
+    alt: "placeholder image 4"
+    title: "Image 4 title caption"
+  - image_path: /assets/images/th-400x400-5.png
+    url: /assets/images/full-600x800-5.png
+    alt: "placeholder image 5"
+    title: "Image 5 title caption"
+  - image_path: /assets/images/th-400x400-6.png
+    url: /assets/images/full-800x600-6.png
+    alt: "placeholder image 6"
+    title: "Image 6 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1080x1920-7.png
+    alt: "placeholder image 7"
+    title: "Image 7 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1920x1080-8.png
+    alt: "placeholder image 8"
+    title: "Image 8 title caption"
+  - image_path: /assets/images/th-400x400-7.png
+    url: /assets/images/full-1200x1200-9.png
+    alt: "placeholder image 9"
+    title: "Image 9 title caption"
+  - image_path: /assets/images/th-400x400-10.png
+    url: /assets/images/full-1280x720-10.png
+    alt: "placeholder image 10"
+    title: "Image 10 title caption"
+# Proiduct Visualization Gallery
+# -------------------------------------------------------------
+logotypes_gallery:
   - image_path: /assets/images/th-400x400-1.png
     url: /assets/images/full-768x1024-1.png
     alt: "placeholder image 1"
@@ -46,9 +151,21 @@ gallery2:
     alt: "placeholder image 10"
     title: "Image 10 title caption"
 ---
+
+<div class="project-home">
+  {% include project-home
+    project_home_title="test"
+    project_home_description="<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit.</p> <p>Voluptatum sapiente expedita maxime animi hic molestiae sint ducimus nesciunt accusantium id, odit dolorum possimus consequatur quae, veritatis delectus minus. Delectus, corporis!</p>"
+    project_home_extra="<p>1Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Tenetur facere, maiores non, veniam cumque libero sed quod exercitationem? Veritatis neque necessitatibus doloremque! Ipsa eius ut nisi voluptate in natus illum?</p>"
+  %}
+  {% include maxgallery id="hair_logic_gallery" caption="This is Hair Logic." %}
+</div>
+
+
+{% comment %}
 <div class="project-home">
   <div class="project-home__info">
-    <h3 class="project-home__info-title">Title</h3>
+    <h3 class="project-home__info-title">Product Visualizations</h3>
     <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum sapiente expedita maxime animi hic molestiae sint ducimus nesciunt accusantium id, odit dolorum possimus consequatur quae, veritatis delectus minus. Delectus, corporis!</p>
   </div>
   <div class="project-home__extra">
@@ -60,5 +177,23 @@ gallery2:
       <li><i class="fa-solid fa-camera"></i> <span>Graphic design: John Doe</span></li>
     </ul>
   </div>
-  {% include maxgallery id="gallery2" caption="This is a half gallery layout example." %}
+  {% include maxgallery id="product_vis_gallery" caption="Product Visualizations" %}
 </div>
+
+<div class="project-home">
+  <div class="project-home__info">
+    <h3 class="project-home__info-title">Logotypes</h3>
+    <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum sapiente expedita maxime animi hic molestiae sint ducimus nesciunt accusantium id, odit dolorum possimus consequatur quae, veritatis delectus minus. Delectus, corporis!</p>
+  </div>
+  <div class="project-home__extra">
+    <p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Tenetur facere, maiores non, veniam cumque libero sed quod exercitationem? Veritatis neque necessitatibus doloremque! Ipsa eius ut nisi voluptate in natus illum?</p>
+  </div>
+  <div class="project-home__credits">
+    <ul>
+      <li><i class="fa-solid fa-camera"></i> <span>Photography: John Doe</span></li>
+      <li><i class="fa-solid fa-camera"></i> <span>Graphic design: John Doe</span></li>
+    </ul>
+  </div>
+  {% include maxgallery id="logotypes_gallery" caption="Logotypes" %}
+</div>
+{% endcomment %}
