@@ -7,13 +7,8 @@
 <div class="project-home__extra">
   {{ include.project_home_extra }}
 </div>
+
 <div class="project-home__credits">
-  <ul>
-    <li><i class="fa-solid fa-camera"></i> <span>Photography: John Doe</span></li>
-    <li><i class="fa-solid fa-video"></i> <span>Graphic design: John Doe</span></li>
-    <li><i class="fa-solid fa-music"></i> <span>Graphic design: John Doe</span></li>
-    <li><i class="fa-solid fa-pen-ruler"></i> <span>Graphic design: John Doe</span></li>
-    <li><i class="fa-solid fa-wand-magic-sparkles"></i> <span>Graphic design: John Doe</span></li>
-    <li><i class="fa-solid fa-cube"></i> <span>Graphic design: John Doe</span></li>
-  </ul>
+.
 </div>
+
