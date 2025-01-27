@@ -31,4 +31,6 @@ If you have a question about using Jekyll, start a discussion on the [Jekyll For
 ## Start local Jekyll
 ```
 bundle exec jekyll serve
+
+git push -u origin master
 ```
